@@ -16,7 +16,7 @@ yarn run dev
 
 ## LightHouse Report
 For Desktop
-![Screenshot from 2024-02-14 16-20-08](https://github.com/shreeyansh-29/Video-Player/assets/76509418/d62bfd77-4733-49fe-87cf-671957efe51a)
+(https://github.com/shreeyansh-29/Video-Player/assets/76509418/d62bfd77-4733-49fe-87cf-671957efe51a)
 
   
 ## Prerequisites
