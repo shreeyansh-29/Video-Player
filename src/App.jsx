@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <img src={Youtube} className="img" />
+        <img src={Youtube} className="img" alt="youtube.png" />
         <h3>Youtube Lite</h3>
       </div>
       <div className="container">
