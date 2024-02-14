@@ -13,6 +13,8 @@ Running the below command will start the application
 yarn run dev
 #(Local application will run on port 5173)  
 ```   
+
+## LightHouse Report
   
 ## Prerequisites
 1.IDE (visual studio)  
