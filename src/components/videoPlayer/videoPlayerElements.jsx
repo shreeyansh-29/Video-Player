@@ -24,6 +24,11 @@ export const Description = styled.p`
   padding: 15px 0;
   color: #fff;
   font-size: 18px;
+  transition: 0.4s ease;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 export const SubTitle = styled.span`
