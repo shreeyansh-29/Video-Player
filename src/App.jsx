@@ -25,22 +25,19 @@ function App() {
   }, []);
 
   const onClick = (index) => {
-    const clickedVideo = playlist[index];
-    const updatedPlaylist = [
-      clickedVideo,
-      ...playlist.filter((_, idx) => idx !== index),
-    ];
-    setMainVideo(clickedVideo);
-    setActive(0);
-    dispatch(uploadPlaylist(updatedPlaylist));
+    playlist.forEach((ele, idx) => {
+      if (idx === index) {
+        setMainVideo(ele);
+        setActive(idx);
+      }
+    });
 
     window.scrollTo({top: 0, behavior: "smooth"});
-    
-    const playlistContainer = document.getElementById("playlist-container");
-    if (playlistContainer) {
-      playlistContainer.scrollTop = {top: 0, behavior: "smooth"};
-    }
   };
+
+  const handleSetActive = (idx) => setActive(idx);
+
+  const handleSetMainVideo = (obj) => setMainVideo(obj);
 
   return (
     <div className="App">
@@ -49,7 +46,13 @@ function App() {
         <h3>Youtube Lite</h3>
       </div>
       <div className="container">
-        <VideoPlayer mainVideo={mainVideo} />
+        <VideoPlayer
+          mainVideo={mainVideo}
+          playlist={playlist}
+          active={active}
+          handleSetActive={handleSetActive}
+          handleSetMainVideo={handleSetMainVideo}
+        />
         <Playlist onClick={onClick} active={active} />
       </div>
     </div>
