@@ -5,6 +5,7 @@ import Playlist from "./components/playlist/index";
 import {useDispatch, useSelector} from "react-redux";
 import {uploadPlaylist} from "./redux/slices/playlistSlice";
 import Youtube from "./assets/youtube.png";
+import {mediaJSON} from "./constants/data";
 import "./App.css";
 
 function App() {
@@ -20,16 +21,25 @@ function App() {
   }, [playlist]);
 
   useEffect(() => {
-    dispatch(uploadPlaylist());
+    dispatch(uploadPlaylist(mediaJSON.categories[0].videos));
   }, []);
 
   const onClick = (index) => {
-    playlist.forEach((ele, idx) => {
-      if (idx === index) {
-        setMainVideo(ele);
-        setActive(idx);
-      }
-    });
+    const clickedVideo = playlist[index];
+    const updatedPlaylist = [
+      clickedVideo,
+      ...playlist.filter((_, idx) => idx !== index),
+    ];
+    setMainVideo(clickedVideo);
+    setActive(0);
+    dispatch(uploadPlaylist(updatedPlaylist));
+
+    window.scrollTo({top: 0, behavior: "smooth"});
+    
+    const playlistContainer = document.getElementById("playlist-container");
+    if (playlistContainer) {
+      playlistContainer.scrollTop = {top: 0, behavior: "smooth"};
+    }
   };
 
   return (

@@ -67,7 +67,7 @@ const Playlist = ({onClick, active}) => {
         Shuffle Videos
         <i className="fa-solid fa-shuffle" style={{marginLeft: "10px"}}></i>
       </WidgetContainer>
-      <VideoList>
+      <VideoList id="playlist-container">
         {playlist &&
           playlist.map((ele, idx) => (
             <VideoContent

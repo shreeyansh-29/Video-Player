@@ -1,5 +1,4 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {mediaJSON} from "../../constants/data";
 
 const initialState = {
   videos: [],
@@ -11,8 +10,8 @@ const playlistSlice = createSlice({
   name: "playlist",
   initialState,
   reducers: {
-    uploadPlaylist: (state) => {
-      state.videos = mediaJSON.categories[0].videos;
+    uploadPlaylist: (state, action) => {
+      state.videos = action.payload;
     },
     shufflePlaylist: (state, action) => {
       state.videos = action.payload;
