@@ -15,9 +15,8 @@ yarn run dev
 
 
 ## LightHouse Report
-For Desktop
-[(https://github.com/shreeyansh-29/Video-Player/assets/76509418/d62bfd77-4733-49fe-87cf-671957efe51a)](https://github.com/shreeyansh-29/Video-Player/blob/main/src/assets/Desktop.png)
-
+[Desktop](https://github.com/shreeyansh-29/Video-Player/blob/main/src/assets/Desktop.png)
+[Mobile](https://github.com/shreeyansh-29/Video-Player/blob/main/src/assets/Mobile.png)
   
 ## Prerequisites
 1.IDE (visual studio)  
