@@ -13,6 +13,7 @@ const MainVideoPlayer = ({mainVideo}) => {
       <VideoContainer>
         <VideoPlayer>
           <Video
+            tabIndex={1}
             src={mainVideo.sources}
             controls
             autoPlay
@@ -20,6 +21,7 @@ const MainVideoPlayer = ({mainVideo}) => {
             id="video"
             muted
             poster={mainVideo.thumb}
+            controlsList="nodownload"
           />
           <Title>{mainVideo.title}</Title>
           <Description>

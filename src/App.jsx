@@ -4,7 +4,9 @@ import VideoPlayer from "./components/videoPlayer/index";
 import Playlist from "./components/playlist/index";
 import {useDispatch, useSelector} from "react-redux";
 import {uploadPlaylist} from "./redux/slices/playlistSlice";
+import Youtube from "./assets/youtube.png";
 import "./App.css";
+
 function App() {
   const dispatch = useDispatch();
   const playlist = useSelector((state) => state.playlist.videos);
@@ -32,7 +34,10 @@ function App() {
 
   return (
     <div className="App">
-      <h3>Youtube Lite</h3>
+      <div className="header">
+        <img src={Youtube} className="img" />
+        <h3>Youtube Lite</h3>
+      </div>
       <div className="container">
         <VideoPlayer mainVideo={mainVideo} />
         <Playlist onClick={onClick} active={active} />

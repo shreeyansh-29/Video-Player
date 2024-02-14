@@ -3,11 +3,20 @@
   padding: 50px 0px;
 }
 
-.App > h3 {
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header > h3 {
   color: red;
   font-size: 40px;
-  text-align: center;
   padding: 10px;
+}
+
+.header > img {
+  width: 40px;
 }
 
 .container {
