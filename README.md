@@ -15,7 +15,10 @@ yarn run dev
 
 ```
 ## LightHouse Report
+For Desktop:
 ![Desktop](https://github.com/shreeyansh-29/Video-Player/blob/main/src/assets/Desktop.png)
+
+For Mobile:
 ![Mobile](https://github.com/shreeyansh-29/Video-Player/blob/main/src/assets/Mobile.png)
   
 ## Prerequisites
