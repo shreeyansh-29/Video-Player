@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
+export const PlaylistContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
 export const VideoList = styled.div`
-  background: #fff;
+  background: #000;
   border-radius: 5px;
-  height: 520px;
+  height: 80vh;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -23,7 +29,7 @@ export const VideoContent = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
-  background: ${({active}) => (active ? "#2980b9" : "#f7f7f7")};
+  background: ${({active}) => (active ? "red" : "#f7f7f7")};
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
@@ -43,4 +49,20 @@ export const Video = styled.video`
 export const Title = styled.h3`
   color: ${({active}) => (active ? "#fff" : "#333")};
   font-size: 17px;
+`;
+
+export const WidgetContainer = styled.div`
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background: red;
+    color: #fff;
+  }
 `;

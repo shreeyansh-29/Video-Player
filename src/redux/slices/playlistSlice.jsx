@@ -11,12 +11,15 @@ const playlistSlice = createSlice({
   name: "playlist",
   initialState,
   reducers: {
-    upload: (state) => {
+    uploadPlaylist: (state) => {
       state.videos = mediaJSON.categories[0].videos;
+    },
+    shufflePlaylist: (state, action) => {
+      state.videos = action.payload;
     },
   },
 });
 
-export const {upload} = playlistSlice.actions;
+export const {uploadPlaylist, shufflePlaylist} = playlistSlice.actions;
 
 export default playlistSlice.reducer;

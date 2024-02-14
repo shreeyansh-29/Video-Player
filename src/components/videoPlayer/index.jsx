@@ -4,18 +4,28 @@ import {
   Video,
   Title,
   Description,
+  SubTitle,
 } from "./videoPlayerElements";
-import {mediaJSON} from "../../constants/data";
-import {useState} from "react";
 
 const MainVideoPlayer = ({mainVideo}) => {
   return (
     <>
       <VideoContainer>
         <VideoPlayer>
-          <Video src={mainVideo.sources} controls autoPlay />
+          <Video
+            src={mainVideo.sources}
+            controls
+            autoPlay
+            buffer
+            id="video"
+            muted
+            poster={mainVideo.thumb}
+          />
           <Title>{mainVideo.title}</Title>
-          <Description>{mainVideo.description}</Description>
+          <Description>
+            <b>About:</b> {mainVideo.description}
+          </Description>
+          <SubTitle>{mainVideo.subtitle}</SubTitle>
         </VideoPlayer>
       </VideoContainer>
     </>
