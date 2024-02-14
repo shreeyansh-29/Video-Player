@@ -13,7 +13,7 @@ Running the below command will start the application
 yarn run dev
 #(Local application will run on port 5173)  
 
-
+```
 ## LightHouse Report
 [Desktop](https://github.com/shreeyansh-29/Video-Player/blob/main/src/assets/Desktop.png)
 [Mobile](https://github.com/shreeyansh-29/Video-Player/blob/main/src/assets/Mobile.png)
