@@ -1,6 +1,4 @@
-import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {
   Title,
   Video,
