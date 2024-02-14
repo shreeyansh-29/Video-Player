@@ -53,7 +53,11 @@ function App() {
           handleSetActive={handleSetActive}
           handleSetMainVideo={handleSetMainVideo}
         />
-        <Playlist onClick={onClick} active={active} />
+        <Playlist
+          onClick={onClick}
+          active={active}
+          handleSetActive={handleSetActive}
+        />
       </div>
     </div>
   );

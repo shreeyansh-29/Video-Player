@@ -18,6 +18,11 @@ export const Title = styled.h3`
   font-size: 30px;
   padding-top: 15px;
   font-weight: 900;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
 `;
 
 export const Description = styled.p`
@@ -25,6 +30,11 @@ export const Description = styled.p`
   color: #fff;
   font-size: 18px;
   transition: 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
 
   @media only screen and (max-width: 480px) {
     font-size: 16px;
@@ -35,4 +45,9 @@ export const SubTitle = styled.span`
   margin: 20px 0;
   font-weight: 600;
   color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
 `;

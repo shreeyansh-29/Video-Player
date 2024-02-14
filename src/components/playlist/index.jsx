@@ -12,7 +12,7 @@ import {
   reorderPlaylist,
 } from "../../redux/slices/playlistSlice";
 
-const Playlist = ({onClick, active}) => {
+const Playlist = ({onClick, active, handleSetActive}) => {
   const dispatch = useDispatch();
   const playlist = useSelector((state) => state.playlist.videos);
 
@@ -29,7 +29,15 @@ const Playlist = ({onClick, active}) => {
         temp[currentIndex],
       ];
     }
+    handleSetActive(0);
     dispatch(shufflePlaylist(temp));
+
+    window.scrollTo({top: 0, behavior: "smooth"});
+    
+    const playlistContainer = document.getElementById("playlist-container");
+    if (playlistContainer) {
+      playlistContainer.scrollTop = {top: 0, behaviour: "smooth"};
+    }
   };
 
   const handleKeyDown = (e) => {

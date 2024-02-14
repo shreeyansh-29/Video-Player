@@ -17,12 +17,10 @@ export const VideoList = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    background: #ccc;
-    border-radius: 50px;
+    background: #fff;
   }
   &::-webkit-scrollbar-thumb {
-    background: #666;
-    border-radius: 50px;
+    background: red;
   }
 `;
 export const VideoContent = styled.div`
@@ -35,9 +33,11 @@ export const VideoContent = styled.div`
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  color: ${({active}) => (active ? "#fff" : "#000")};
 
   &:hover {
-    background: ${({active}) => (active ? "" : "#eee")};
+    background: ${({active}) => (active ? "" : "red")};
+    color: ${({active}) => (active ? "" : "white")};
   }
 `;
 
@@ -47,7 +47,6 @@ export const Video = styled.video`
 `;
 
 export const Title = styled.h3`
-  color: ${({active}) => (active ? "#fff" : "#333")};
   font-size: 17px;
 `;
 
