@@ -4,21 +4,23 @@ Live URL: https://video-player-teal-six.vercel.app/
 
 ## Getting started
 ```  
-git clone https://github.com/shreeyansh-29/10Times-Assignment 
-cd 10Times-Assignment
-npm install  
+git clone https://github.com/shreeyansh-29/Video-Player
+cd Video-Player
+yarn install  
 ```  
 Running the below command will start the application  
 ```  
-npm start  
-#(Local application will run on port 3000)  
+yarn run dev
+#(Local application will run on port 5173)  
 ```   
   
 ## Prerequisites
 1.IDE (visual studio)  
 
-2.npm version 6.14.11
+2.npm version 8.15.0
 
 3.react v18.2.0
 
-4.node v14.15.5
+4.node v18.7.0
+
+5.yarn v1.22.19
