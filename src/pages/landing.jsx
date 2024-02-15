@@ -52,7 +52,10 @@ function Landing() {
         <img src={Youtube} className="img" alt="youtube.png" />
         <h3>Youtube Lite</h3>
       </div>
-      <SearchInput categories={categories} />
+      <SearchInput
+        categories={categories}
+        handleSetMainVideo={handleSetMainVideo}
+      />
       <div className="container">
         <VideoPlayer
           mainVideo={mainVideo}

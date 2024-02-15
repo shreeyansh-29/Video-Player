@@ -46,28 +46,26 @@ const MainVideoPlayer = ({
   };
 
   return (
-    <>
-      <VideoContainer>
-        <VideoPlayer>
-          <Video
-            ref={videoRef}
-            tabIndex={1}
-            src={mainVideo.sources}
-            controls
-            // autoPlay
-            id="video"
-            muted
-            poster={mainVideo.thumb}
-            controlsList="nodownload"
-          />
-          <Title>{mainVideo.title}</Title>
-          <Description>
-            <b>About:</b> {mainVideo.description}
-          </Description>
-          <SubTitle>{mainVideo.subtitle}</SubTitle>
-        </VideoPlayer>
-      </VideoContainer>
-    </>
+    <VideoContainer>
+      <VideoPlayer>
+        <Video
+          tabIndex={10}
+          ref={videoRef}
+          src={mainVideo.sources}
+          controls
+          autoPlay
+          id="video"
+          muted
+          poster={mainVideo.thumb}
+          controlsList="nodownload"
+        />
+        <Title>{mainVideo.title}</Title>
+        <Description>
+          <b>About:</b> {mainVideo.description}
+        </Description>
+        <SubTitle>{mainVideo.subtitle}</SubTitle>
+      </VideoPlayer>
+    </VideoContainer>
   );
 };
 
