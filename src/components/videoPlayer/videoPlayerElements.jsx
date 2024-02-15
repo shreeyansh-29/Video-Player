@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const VideoContainer = styled.div`
-  background-color: #000;
+  background-color: #151719;
   border-radius: 5px;
-  padding: 10px;
+  ${'' /* padding: 10px; */}
 `;
 
 export const VideoPlayer = styled.div``;
@@ -32,10 +32,6 @@ export const Description = styled.p`
   transition: 0.4s ease;
   cursor: pointer;
 
-  &:hover {
-    color: red;
-  }
-
   @media only screen and (max-width: 480px) {
     font-size: 16px;
   }
@@ -44,10 +40,6 @@ export const Description = styled.p`
 export const SubTitle = styled.span`
   margin: 20px 0;
   font-weight: 600;
-  color: #fff;
+  color: red;
   cursor: pointer;
-
-  &:hover {
-    color: red;
-  }
 `;

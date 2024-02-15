@@ -1,6 +1,6 @@
 .App {
-  background: #000;
-  padding: 50px 0px;
+  background: #151719;
+  padding: 40px 0px;
 }
 
 .header {
@@ -13,10 +13,12 @@
   color: red;
   font-size: 40px;
   padding: 10px;
+  transition: 0.4s all ease;
 }
 
 .header > img {
   width: 40px;
+  transition: 0.4s all ease;
 }
 
 .container {
@@ -25,6 +27,7 @@
   grid-template-columns: 2fr 1fr;
   padding: 5px 5%;
   align-items: flex-start;
+  transition: 0.4s all ease;
 }
 
 @media only screen and (max-width: 991px) {
@@ -37,5 +40,15 @@
 @media only screen and (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
+  }
+
+  .header > h3 {
+    color: red;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .header > img {
+    width: 30px;
   }
 }

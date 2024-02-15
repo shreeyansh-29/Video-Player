@@ -54,8 +54,7 @@ const MainVideoPlayer = ({
             tabIndex={1}
             src={mainVideo.sources}
             controls
-            autoPlay
-            buffer
+            // autoPlay
             id="video"
             muted
             poster={mainVideo.thumb}

@@ -74,26 +74,7 @@ export const mediaJSON = {
             "https://storage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerMeltdowns.jpg",
           title: "For Bigger Meltdowns",
         },
-        {
-          description:
-            "Sintel is an independently produced short film, initiated by the Blender Foundation as a means to further improve and validate the free/open source 3D creation suite Blender. With initial funding provided by 1000s of donations via the internet community, it has again proven to be a viable development model for both open 3D technology as for independent animation film.\nThis 15 minute film has been realized in the studio of the Amsterdam Blender Institute, by an international team of artists and developers. In addition to that, several crucial technical and creative targets have been realized online, by developers and artists and teams all over the world.\nwww.sintel.org",
-          sources:
-            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-          subtitle: "By Blender Foundation",
-          thumb:
-            "https://storage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
-          title: "Sintel",
-        },
-        {
-          description:
-            "Smoking Tire takes the all-new Subaru Outback to the highest point we can find in hopes our customer-appreciation Balloon Launch will get some free T-shirts into the hands of our viewers.",
-          sources:
-            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
-          subtitle: "By Garage419",
-          thumb:
-            "https://storage.googleapis.com/gtv-videos-bucket/sample/images/SubaruOutbackOnStreetAndDirt.jpg",
-          title: "Subaru Outback On Street And Dirt",
-        },
+
         {
           description:
             "Tears of Steel was realized with crowd-funding by users of the open source 3D creation tool Blender. Target was to improve and test a complete open and free pipeline for visual effects in film - and to make a compelling sci-fi film in Amsterdam, the Netherlands.  The film itself, and all raw material used for making it, have been released under the Creatieve Commons 3.0 Attribution license. Visit the tearsofsteel.org website to find out more about this, or to purchase the 4-DVD box with a lot of extras.  (CC) Blender Foundation - http://www.tearsofsteel.org",
@@ -103,6 +84,21 @@ export const mediaJSON = {
           thumb:
             "https://storage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
           title: "Tears of Steel",
+        },
+      ],
+    },
+    {
+      name: "Spy",
+      videos: [
+        {
+          description:
+            "Smoking Tire takes the all-new Subaru Outback to the highest point we can find in hopes our customer-appreciation Balloon Launch will get some free T-shirts into the hands of our viewers.",
+          sources:
+            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+          subtitle: "By Garage419",
+          thumb:
+            "https://storage.googleapis.com/gtv-videos-bucket/sample/images/SubaruOutbackOnStreetAndDirt.jpg",
+          title: "Subaru Outback On Street And Dirt",
         },
         {
           description:
@@ -133,6 +129,16 @@ export const mediaJSON = {
           thumb:
             "https://www.kindpng.com/picc/m/736-7369205_play-button-png-pic-video-default-transparent-png.png",
           title: "What care can you get for a grand?",
+        },
+        {
+          description:
+            "Sintel is an independently produced short film, initiated by the Blender Foundation as a means to further improve and validate the free/open source 3D creation suite Blender. With initial funding provided by 1000s of donations via the internet community, it has again proven to be a viable development model for both open 3D technology as for independent animation film.\nThis 15 minute film has been realized in the studio of the Amsterdam Blender Institute, by an international team of artists and developers. In addition to that, several crucial technical and creative targets have been realized online, by developers and artists and teams all over the world.\nwww.sintel.org",
+          sources:
+            "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+          subtitle: "By Blender Foundation",
+          thumb:
+            "https://storage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+          title: "Sintel",
         },
       ],
     },
