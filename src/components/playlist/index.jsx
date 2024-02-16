@@ -22,7 +22,7 @@ import {uploadPlaylist} from "../../redux/slices/playlistSlice";
 const Playlist = ({onClick, active, handleSetActive, categories}) => {
   const dispatch = useDispatch();
   const playlist = useSelector((state) => state.playlist.videos);
-  
+
   const [filterDropDown, setFilterDropDown] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
 

@@ -19,6 +19,7 @@ function Landing() {
   useEffect(() => {
     if (playlist) {
       setMainVideo(playlist[0]);
+      setActive(0);
     }
   }, [playlist]);
 
