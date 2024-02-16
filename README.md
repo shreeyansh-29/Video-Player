@@ -14,6 +14,17 @@ yarn run dev
 #(Local application will run on port 5173)  
 
 ```
+## Project Overview
+```  
+Tech Used: React, Js, HTML & CSS.
+For styling: Styled Components.
+
+The Complete it divided into 3 major components 
+1) SearchBox
+2) VideoPlayer
+3) PlaylistSection
+```  
+
 ## LightHouse Report
 For Desktop:
 ![Desktop](https://github.com/shreeyansh-29/Video-Player/blob/main/src/assets/Desktop.png)
