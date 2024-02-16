@@ -37,7 +37,6 @@ export const VideoContent = styled.div`
 
   &:hover {
     background: ${({active}) => (active ? "" : "lightgrey")};
-    ${"" /* color: ${({active}) => (active ? "" : "white")}; */}
   }
 `;
 
@@ -74,12 +73,6 @@ export const ShuffleContainer = styled.div`
   padding: 10px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  ${
-    "" /* 
-  &:hover {
-    background: lightgrey;
-  } */
-  }
 `;
 
 export const FilterContainer = styled.div`
@@ -89,12 +82,6 @@ export const FilterContainer = styled.div`
   text-align: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-
-  ${
-    "" /* &:hover {
-    background: lightgrey;
-  } */
-  }
 `;
 
 export const UnorderedList = styled.ul`

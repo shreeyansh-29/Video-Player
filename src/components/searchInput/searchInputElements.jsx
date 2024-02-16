@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 export const SearchContainer = styled.div`
-  ${"" /* background: gray; */}
   width: 100%;
   display: flex;
-  ${"" /* align-items: center; */}
   justify-content: center;
   border-radius: 5px;
   margin: 20px 0px 30px 0px;
@@ -33,23 +31,17 @@ export const InputContainer = styled.div`
   @media only screen and (max-width: 480px) {
     width: 90%;
   }
-  ${"" /* background: red; */}
 `;
 
 export const InputField = styled.input`
   padding: 12px;
   outline: none;
-  ${"" /* border-radius: 14px; */}
   font-size: 16px;
   font-weight: 800;
   width: 85%;
   border: none;
   background: #121212;
   color: #fff;
-  ${
-    "" /* border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px; */
-  }
 
   margin-left: 10px;
 `;
@@ -108,7 +100,6 @@ export const ListItem = styled.li`
   padding: 10px;
   cursor: pointer;
   color: #fff;
-  ${"" /* width: 50%; */}
 
   &:hover {
     background: gray;
