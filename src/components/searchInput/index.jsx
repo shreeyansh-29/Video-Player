@@ -54,6 +54,10 @@ const SearchInput = ({handleSetMainVideo}) => {
     } else {
       dispatch(uploadPlaylist([selectedVideo, ...playlist]));
     }
+    const playlistContainer = document.getElementById("playlist-container");
+    if (playlistContainer) {
+      playlistContainer.scrollTop = {top: 0, behavior: "smooth"};
+    }
   };
 
   //event for list item

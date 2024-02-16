@@ -101,32 +101,16 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
   const handleFilterItemKeyDown = (e, category) => {
     if (e.key === "Enter") {
       setSelectedCategory(category);
-
-      // console.log(selectedCategory);
-
-      const temp = mediaJSON.categories.reduce((acc, category) => {
-        if (category.name === selectedCategory) {
-          return [...acc, ...category.videos];
-        }
-        return acc;
-      }, []);
-      temp.length && dispatch(uploadPlaylist(temp));
-      setFilterDropDown(!filterDropDown);
+      filterPlaylist(category);
     }
     if (e.key === "Escape") {
       setFilterDropDown(!filterDropDown);
     }
   };
 
-  const handleItemClick = (category) => {
-    // console.log(selectedCategory);
-
-    setSelectedCategory(category);
-
-    // console.log(selectedCategory);
-
+  const filterPlaylist = (filteredCategory) => {
     const temp = mediaJSON.categories.reduce((acc, category) => {
-      if (category.name === selectedCategory) {
+      if (category.name === filteredCategory) {
         return [...acc, ...category.videos];
       }
       return acc;
@@ -135,12 +119,17 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
     setFilterDropDown(!filterDropDown);
   };
 
+  const handleItemClick = (category) => {
+    setSelectedCategory(category);
+    filterPlaylist(category);
+  };
+
   return (
     <PlaylistContainer>
       <WidgetContainer>
         <ShuffleContainer
           onClick={handleClick}
-          tabIndex={20}
+          tabIndex={21}
           onKeyDown={handleKeyDown}
         >
           Shuffle Videos
@@ -149,7 +138,7 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
         <FilterContainer
           onClick={() => handleSetFilter()}
           ref={filterRef}
-          tabIndex={21}
+          tabIndex={22}
           onKeyDown={handleFilterKeyDown}
         >
           {filterDropDown ? (
@@ -162,7 +151,7 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
               <UnorderedList>
                 {categories.map((ele, i) => (
                   <ListItem
-                    tabIndex={i + 22}
+                    tabIndex={i + 23}
                     key={i}
                     onKeyDown={(e) => handleFilterItemKeyDown(e, ele)}
                     onClick={() => handleItemClick(ele)}
@@ -180,7 +169,7 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
         {playlist &&
           playlist.map((ele, idx) => (
             <VideoContent
-              tabIndex={idx + 25}
+              tabIndex={idx + 27}
               key={idx}
               onClick={() => onClick(idx)}
               active={active === idx ? true : false}

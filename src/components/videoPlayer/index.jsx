@@ -49,7 +49,7 @@ const MainVideoPlayer = ({
     <VideoContainer>
       <VideoPlayer>
         <Video
-          tabIndex={10}
+          tabIndex={20}
           ref={videoRef}
           src={mainVideo.sources}
           controls
