@@ -16,13 +16,22 @@ yarn run dev
 ```
 ## Project Overview
 ```  
-Tech Used: React, Js, HTML & CSS.
+Tech Used: React, Redux-Toolkit, JS, HTML & CSS.
 For styling: Styled Components.
 
-The Complete it divided into 3 major components 
+The complete project it divided into 3 major components 
 1) SearchBox
 2) VideoPlayer
 3) PlaylistSection
+
+Each component elements are created using styled-component. 
+
+Features: 
+1) The application is responsive for various screen sizes.
+2) Video Player includes fullscreen mode, volume control, thumbnail, picture-in-picture mode and seek timer previews functionality.
+3) The application is keyboard friendly.
+4) Application includes search and filter functionality.
+5) The videos inside playlist section can be shuffled randomly or can change the order by dragging video inside playlist section.
 ```  
 
 ## LightHouse Report
