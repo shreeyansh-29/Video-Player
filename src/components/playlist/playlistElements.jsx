@@ -9,7 +9,7 @@ export const PlaylistContainer = styled.div`
 export const VideoList = styled.div`
   background: #151719;
   border-radius: 5px;
-  height: 80vh;
+  max-height: 80vh;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
