@@ -107,7 +107,7 @@ export const mediaJSON = {
             "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
           subtitle: "By Garage419",
           thumb:
-            "https://www.kindpng.com/picc/m/736-7369205_play-button-png-pic-video-default-transparent-png.png",
+            "https://storage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
           title: "Volkswagen GTI Review",
         },
         {
@@ -117,7 +117,7 @@ export const mediaJSON = {
             "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
           subtitle: "By Garage419",
           thumb:
-            "https://www.kindpng.com/picc/m/736-7369205_play-button-png-pic-video-default-transparent-png.png",
+            "https://storage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
           title: "We Are Going On Bullrun",
         },
         {
@@ -127,7 +127,7 @@ export const mediaJSON = {
             "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
           subtitle: "By Garage419",
           thumb:
-            "https://www.kindpng.com/picc/m/736-7369205_play-button-png-pic-video-default-transparent-png.png",
+            "https://storage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
           title: "What care can you get for a grand?",
         },
         {
