@@ -23,7 +23,7 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
   const dispatch = useDispatch();
   const playlist = useSelector((state) => state.playlist.videos);
   const [filterDropDown, setFilterDropDown] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filterRef = useRef(null);
 
@@ -109,6 +109,13 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
   };
 
   const filterPlaylist = (filteredCategory) => {
+    if (filteredCategory === "All") {
+      const allVideos = mediaJSON.categories.flatMap(
+        (category) => category.videos
+      );
+      dispatch(uploadPlaylist(allVideos));
+      return;
+    }
     const temp = mediaJSON.categories.reduce((acc, category) => {
       if (category.name === filteredCategory) {
         return [...acc, ...category.videos];
@@ -149,9 +156,17 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
           {filterDropDown && (
             <>
               <UnorderedList>
+                <ListItem
+                  tabIndex={23}
+                  onKeyDown={(e) => handleFilterItemKeyDown(e, "All")}
+                  onClick={() => handleItemClick("All")}
+                  active={selectedCategory === "All" ? true : false}
+                >
+                  All
+                </ListItem>
                 {categories.map((ele, i) => (
                   <ListItem
-                    tabIndex={i + 23}
+                    tabIndex={i + 24}
                     key={i}
                     onKeyDown={(e) => handleFilterItemKeyDown(e, ele)}
                     onClick={() => handleItemClick(ele)}
@@ -169,7 +184,7 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
         {playlist &&
           playlist.map((ele, idx) => (
             <VideoContent
-              tabIndex={idx + 27}
+              tabIndex={idx + 28}
               key={idx}
               onClick={() => onClick(idx)}
               active={active === idx ? true : false}

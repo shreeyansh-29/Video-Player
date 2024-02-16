@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const VideoContainer = styled.div`
-  background-color: #151719;
+  background-color: #000;
   border-radius: 5px;
   ${"" /* padding: 10px; */}
 `;

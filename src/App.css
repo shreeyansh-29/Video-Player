@@ -1,6 +1,7 @@
 .App {
-  background: #151719;
+  /* background: #151719; */
   padding: 40px 0px;
+  background-color: #000;
 }
 
 .header {

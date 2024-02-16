@@ -7,7 +7,7 @@ export const PlaylistContainer = styled.div`
 `;
 
 export const VideoList = styled.div`
-  background: #151719;
+  background: #000;
   border-radius: 5px;
   max-height: 80vh;
   overflow-y: scroll;

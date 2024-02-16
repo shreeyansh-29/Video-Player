@@ -31,12 +31,27 @@ const SearchInput = ({handleSetMainVideo}) => {
 
   //event for search icon
   const handleSearchClick = () => {
-    if (searchQuery.length > 3) filteredResult(playlist, searchQuery);
+    if (searchQuery.length > 3) {
+      filteredResult(playlist, searchQuery);
+      if (searchResult) {
+        handleSetMainVideo(searchResult[0]);
+        setSearchResult([]);
+        setSuggestionAreaVisibilty(false);
+        updatePlaylist(searchResult[0]);
+      }
+    }
   };
 
   const handleSearchKeyDown = (e) => {
-    if (e.key === "Enter" && searchQuery.length > 3)
+    if (e.key === "Enter" && searchQuery.length > 3) {
       filteredResult(playlist, searchQuery);
+      if (searchResult) {
+        handleSetMainVideo(searchResult[0]);
+        setSearchResult([]);
+        setSuggestionAreaVisibilty(false);
+        updatePlaylist(searchResult[0]);
+      }
+    }
   };
 
   //updating search video to be pushed in top of playlist
@@ -96,7 +111,6 @@ const SearchInput = ({handleSetMainVideo}) => {
     const filteredResults = playlist.filter((video) =>
       video.title.toLowerCase().includes(searchQuery.trim().toLowerCase())
     );
-
     setSearchResult(filteredResults);
   };
 
