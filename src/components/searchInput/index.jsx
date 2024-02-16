@@ -23,13 +23,18 @@ const SearchInput = ({handleSetMainVideo}) => {
   const suggestionAreaRef = useRef(null);
   const inputRef = useRef(null);
 
-  //input filed onChangeHandler
+  /**
+   * InputField onChangeHandler
+   * @param {Event} e
+   */
   const handleChange = (e) => {
     setSearchQuery(e.target.value);
     if (searchQuery.length > 3) filteredResult(playlist, searchQuery);
   };
 
-  //event for search icon
+  /**
+   * Set searchedVideo to primary video onClick on SearchIcon
+   */
   const handleSearchClick = () => {
     if (searchQuery.length > 3) {
       filteredResult(playlist, searchQuery);
@@ -41,7 +46,10 @@ const SearchInput = ({handleSetMainVideo}) => {
       }
     }
   };
-
+  /**
+   * Set searchedVideo to primary video onKeyDown on SearchIcon
+   * @param {Event} e
+   */
   const handleSearchKeyDown = (e) => {
     if (e.key === "Enter" && searchQuery.length > 3) {
       filteredResult(playlist, searchQuery);
@@ -54,7 +62,10 @@ const SearchInput = ({handleSetMainVideo}) => {
     }
   };
 
-  //updating search video to be pushed in top of playlist
+  /**
+   * updating search video to be pushed in top of playlist
+   * @param {video} selectedVideo
+   */
   const updatePlaylist = (selectedVideo) => {
     const mainVideoIndex = playlist.findIndex(
       (video) => video.title === selectedVideo.title
@@ -75,7 +86,11 @@ const SearchInput = ({handleSetMainVideo}) => {
     }
   };
 
-  //event for list item
+  /**
+   * Set video clicked from searchResult to primary video onKeyDown event
+   * @param {Event} e
+   * @param {video} element
+   */
   const handleListKeyDown = (e, element) => {
     if (e.key === "Enter") {
       setSearchQuery(element.title);
@@ -86,6 +101,10 @@ const SearchInput = ({handleSetMainVideo}) => {
     }
   };
 
+  /**
+   * Set video clicked from searchResult to primary video onClick event
+   * @param {video} element
+   */
   const handleListItemClick = (element) => {
     setSearchQuery(element.title);
     handleSetMainVideo(element);
@@ -93,12 +112,18 @@ const SearchInput = ({handleSetMainVideo}) => {
     updatePlaylist(element);
   };
 
-  //event handling for clear icon
+  /**
+   * Clear input onClick event
+   */
   const handleClear = () => {
     setSearchQuery("");
     setSearchResult([]);
   };
 
+  /**
+   * Clear input onKeyDown event
+   * @param {Event} e
+   */
   const handleClearKeyDown = (e) => {
     if (e.key === "Enter") {
       setSearchQuery("");
@@ -106,7 +131,11 @@ const SearchInput = ({handleSetMainVideo}) => {
     }
   };
 
-  //returns filtered vudeos from playlist
+  /**
+   * Filter videos from playlist
+   * @param {videos[]} playlist
+   * @param {String} searchQuery
+   */
   const filteredResult = (playlist, searchQuery) => {
     const filteredResults = playlist.filter((video) =>
       video.title.toLowerCase().includes(searchQuery.trim().toLowerCase())
@@ -114,7 +143,9 @@ const SearchInput = ({handleSetMainVideo}) => {
     setSearchResult(filteredResults);
   };
 
-  //event listeners
+  /**
+   * event listeners
+   */
   useEffect(() => {
     document.addEventListener("click", (e) => {
       if (

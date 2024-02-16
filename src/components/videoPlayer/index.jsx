@@ -17,6 +17,9 @@ const MainVideoPlayer = ({
 }) => {
   const videoRef = useRef(null);
 
+  /**
+   * Auto updating main video if current video gets over
+   */
   useEffect(() => {
     const videoElement = videoRef.current;
 
@@ -36,6 +39,10 @@ const MainVideoPlayer = ({
     };
   }, [active, playlist]);
 
+  /**
+   * Event for updation of main video and active video index
+   * @param {Number} index
+   */
   const setMainVideoAndPlay = (index) => {
     handleSetMainVideo(playlist[index]);
     handleSetActive(index);

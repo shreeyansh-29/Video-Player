@@ -31,6 +31,10 @@ function Landing() {
     dispatch(uploadPlaylist(allVideos));
   }, []);
 
+  /**
+   * Event handler for updating state of main video onClick of video inside playlist
+   * @param {Number} index
+   */
   const onClick = (index) => {
     playlist.forEach((ele, idx) => {
       if (idx === index) {
@@ -42,8 +46,16 @@ function Landing() {
     window.scrollTo({top: 0, behavior: "smooth"});
   };
 
+  /**
+   * Event handler for updating state of active video
+   * @param {Number} idx
+   */
   const handleSetActive = (idx) => setActive(idx);
 
+  /**
+   * Event handler for updating state of main video
+   * @param {movie} obj
+   */
   const handleSetMainVideo = (obj) => setMainVideo(obj);
 
   return (

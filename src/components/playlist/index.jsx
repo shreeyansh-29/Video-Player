@@ -22,6 +22,7 @@ import {uploadPlaylist} from "../../redux/slices/playlistSlice";
 const Playlist = ({onClick, active, handleSetActive, categories}) => {
   const dispatch = useDispatch();
   const playlist = useSelector((state) => state.playlist.videos);
+  
   const [filterDropDown, setFilterDropDown] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -42,7 +43,10 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
     };
   }, []);
 
-  const handleClick = () => {
+  /**
+   * Click Event for shuffling videos in playlist
+   */
+  const handleShuffleClick = () => {
     let temp = [...playlist];
 
     let currentIndex = temp.length,
@@ -66,13 +70,22 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
     }
   };
 
-  const handleKeyDown = (e) => {
+  /**
+   * Keyboard Event for shuffling videos in playlist
+   * @param {Event} e
+   */
+  const handleShuffleKeyDown = (e) => {
     if (e.key === "Enter") {
-      handleClick();
+      handleShuffleClick();
     }
   };
 
-  const handleKeyPress = (e, idx) => {
+  /**
+   *Keyboard event for updation of mainVideo
+   * @param {Event} e
+   * @param {Number} idx
+   */
+  const handleVideoKeyPress = (e, idx) => {
     if (e.key === "Enter") {
       onClick(idx);
     }
@@ -91,13 +104,25 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
     dispatch(reorderPlaylist({draggedIndex, targetIndex}));
   };
 
+  /**
+   * Click Event for updation of visibilty of filterDropDown
+   */
   const handleSetFilter = () => setFilterDropDown(!filterDropDown);
 
+  /**
+   * Keyboard Event for updation of visibilty of filterDropDown
+   * @param {Event} e
+   */
   const handleFilterKeyDown = (e) => {
     if (e.key === "Enter") setFilterDropDown(!filterDropDown);
     if (e.key === "Escape") setFilterDropDown(false);
   };
 
+  /**
+   * Keyboard Event to update category and trigger filterPlaylist()
+   * @param {Event} e
+   * @param {String} category
+   */
   const handleFilterItemKeyDown = (e, category) => {
     if (e.key === "Enter") {
       setSelectedCategory(category);
@@ -108,6 +133,19 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
     }
   };
 
+  /**
+   * Click Event to update category and trigger filterPlaylist()
+   * @param {String} category
+   */
+  const handleItemClick = (category) => {
+    setSelectedCategory(category);
+    filterPlaylist(category);
+  };
+
+  /**
+   * Filters video to be updated in playlist as per the selectedCategory
+   * @param {String} filteredCategory
+   */
   const filterPlaylist = (filteredCategory) => {
     if (filteredCategory === "All") {
       const allVideos = mediaJSON.categories.flatMap(
@@ -126,18 +164,13 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
     setFilterDropDown(!filterDropDown);
   };
 
-  const handleItemClick = (category) => {
-    setSelectedCategory(category);
-    filterPlaylist(category);
-  };
-
   return (
     <PlaylistContainer>
       <WidgetContainer>
         <ShuffleContainer
-          onClick={handleClick}
+          onClick={handleShuffleClick}
           tabIndex={21}
-          onKeyDown={handleKeyDown}
+          onKeyDown={handleShuffleKeyDown}
         >
           Shuffle Videos
           <i className="fa-solid fa-shuffle" style={{marginLeft: "10px"}} />
@@ -192,7 +225,7 @@ const Playlist = ({onClick, active, handleSetActive, categories}) => {
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, idx)}
               draggable
-              onKeyDown={(e) => handleKeyPress(e, idx)}
+              onKeyDown={(e) => handleVideoKeyPress(e, idx)}
             >
               <Video src={ele.sources} muted poster={ele.thumb} />
               <Title active={active === idx ? true : false}>{ele.title}</Title>
